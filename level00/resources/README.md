@@ -16,6 +16,7 @@ Ce mot de passe ne fonctionne pas avec flag00, il est sans doute chiffré. Il s'
 <pre>
 <code>$ su flag00
 Password: nottoohardhere
+Don't forget to launch getflag !
 $ getflag
 Check flag.Here is your token : x24ti5gi3x0ol2eh4esiuxias</code>
 </pre>
