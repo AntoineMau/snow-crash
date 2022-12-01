@@ -1,19 +1,21 @@
-On trouve un fichier level02.pcap qu'il faut extraire de la vm pour l'analyser.
+# Level02
+
+On trouve un fichier <code>level02.pcap</code> qu'il faut extraire de la vm pour l'analyser.
 
 Depuis la machine hôte :
 
-<pre><code>$ scp -P 4242 -r level02@ip_vm:/home/user/level02/level02.pcap .
-chmod 444 level02.pcap</code></pre>
+<pre>$ scp -P 4242 -r level02@ip_vm:/home/user/level02/level02.pcap .
+chmod 444 level02.pcap</pre>
 
-On ouvre ensuite le pcap dans WireShark, on selectionne le premier paquets puis : Analyze / Follow / TCP Stream
+On ouvre ensuite le pcap dans <code>WireShark</code>, on selectionne le premier paquets puis : Analyze / Follow / TCP Stream
 
 Ce qui nous permet de trouver :
 
 <code>Password: ft_wandr...NDRel.L0L</code>
 
-En visualisant la donnée en Hex Code on peut voir que les points représentent en fait le caractère non imprimable <7F> soit DEL
+En visualisant la donnée en Hex Code on peut voir que les points représentent en fait le caractère non imprimable <code><7F></code> soit <code>DEL</code>
 
-<pre><code>000000B9  66                                                 f
+<pre>000000B9  66                                                 f
 000000BA  74                                                 t
 000000BB  5f                                                 _
 000000BC  77                                                 w
@@ -33,7 +35,7 @@ En visualisant la donnée en Hex Code on peut voir que les points représentent 
 000000CA  4c                                                 L
 000000CB  30                                                 0
 000000CC  4c                                                 L
-000000CD  0d                                                 .</code></pre>
+000000CD  0d                                                 .</pre>
 
 Le mot de passe pour flag02 est donc :
 
@@ -44,4 +46,4 @@ Le mot de passe pour flag02 est donc :
 Password: ft_waNDReL0L
 Don't forget to launch getflag !
 $ getflag
-Check flag.Here is your token : kooda2puivaav1idi4f57q8iq</code></pre>
+Check flag.Here is your token : kooda2puivaav1idi4f57q8iq</pre>

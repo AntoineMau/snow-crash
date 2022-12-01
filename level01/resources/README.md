@@ -2,12 +2,12 @@
 
 On cherche a regarder si l’on peut trouver des informations dans le fichier <code>/etc/passwd</code>
 
-<pre><code>$ cat /etc/passwd
+<pre>$ cat /etc/passwd
 ***
 flag00:x:3000:3000::/home/flag/flag00:/bin/bash
 flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
 flag02:x:3002:3002::/home/flag/flag02:/bin/bash
-***</code></pre>
+***</pre>
 
 On observe que <code>flag01:42hDRfypTqqnw</code> est en clair
 
@@ -17,20 +17,20 @@ On install <code>John The Ripper</code>
 
 On enregistre le mot de passe précédemment trouvé
 
-<pre><code>$ echo "flag01:42hDRfypTqqnw" > passwd</code></pre>
+<pre>$ echo "flag01:42hDRfypTqqnw" > passwd</pre>
 
 On lance john sur le fichier passwd pour le décrypter
 
-<pre><code>$ ./john passwd --show
-flag01:abcdefg</code></pre>
+<pre>$ ./john passwd --show
+flag01:abcdefg</pre>
 
 On a plus qu'a essayer
 
-<pre><code>$ su flag01
+<pre>$ su flag01
 Password:
 Don't forget to launch getflag !
 $ getflag
 Check flag.Here is your token : f2av5il02puano7naaf6adaaf
-</code></pre>
+</pre>
 
 https://www.openwall.com/john/
